@@ -55,6 +55,7 @@ Para instalar pip revisar "[pip installation](https://pip.pypa.io/en/stable/inst
 
 ## Inicio del proyecto
 Para iniciar el servidor de flask:
-1. `cd app`
-2. `flask --app main run --debug`
-3. Abrir navegador en `http://localhost:5000`
+1. Entra al directorio app: `cd app`
+2. Carga bd y colección de usuarios: `python init-db.py`
+3. Inicia el proyecto: `flask --app main run --debug`
+4. Abrir navegador en `http://localhost:5000`

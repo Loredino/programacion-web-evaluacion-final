@@ -1,0 +1,11 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<!-- Menu -->
+<div class="mt-5" id="menu">
+    <a href="{{ url_for('ejercicio_uno') }}" id="ejercicio-1">Ejercicio 1</a>
+    <a href="{{ url_for('ejercicio_dos') }}" id="ejercicio-2">Ejercicio 2</a>
+</div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}Ejercicio 2{% endblock %}
+
+{% block content %}
+<div class="row mt-5">
+    <div class="bg-white col-6 offset-3 px-4 pb-4 pt-5 rounded shadow-sm">
+        <h3 class="text-center">Inicio de sesión</h3>
+
+        {% with errores = get_flashed_messages() %}
+        {% if errores %}
+
+        <!-- Errores -->
+        <div class="alert alert-danger" role="alert">
+                <ul class="mb-0">
+                    {% for error in errores %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        {% endwith %}
+
+        <form action="{{ url_for('ejercicio_dos') }}" method="POST">
+            <input name="csrf_token" type="hidden" value="{{ csrf_token }}">
+
+            <div class="mb-3 text-center">
+                <label for="nombre">Ingresa tu nombre</label>
+                <input class="form-control" id="nombre" name="nombre" type="text"  required>
+            </div>
+            <div class="mb-3 text-center">
+                <label for="clave">Ingresa tu contraseña</label>
+                <input class="form-control" id="clave" name="clave" type="password" required>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary rounded-1" type="submit">Verificar</button>
+            </div>
+        </form>
+
+        <div class="mt-3 text-start">
+            {% if usuario_logueado %}
+                {{ mensaje_bienvenida }}
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

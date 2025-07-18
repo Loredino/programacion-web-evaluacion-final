@@ -1,0 +1,38 @@
+body {
+    background-color: #F3F3F3;
+}
+button,
+h3,
+label {
+    font-family: 'Arial' !important;
+}
+h3 {
+    font-weight: bold;
+}
+
+/* Menu */
+#menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+#menu > a {
+    align-items: center;
+    color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    order: 1;
+    text-decoration: none;
+    width: 200px;
+}
+
+#ejercicio-1 {
+    background: #b00eb0;
+}
+
+#ejercicio-2 {
+    background: #8bc820
+}

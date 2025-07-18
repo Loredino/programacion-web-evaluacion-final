@@ -1,2 +1,3 @@
 # Ignora carpeta .venv (ambiente virtual de python)
 .venv/
+mongo-data/**/*

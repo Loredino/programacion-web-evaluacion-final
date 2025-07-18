@@ -53,6 +53,10 @@ Para instalar pip revisar "[pip installation](https://pip.pypa.io/en/stable/inst
 
 `pip install -r requirements.txt`
 
+## MongoDB
+Se espera que la instancia de mongo esté corriendo o sea accesible desde **localhost:27017** con el usuario por defecto sin contraseña.
+En caso contrario, se debe configurar en **main.py:16**.
+
 ## Inicio del proyecto
 Para iniciar el servidor de flask:
 1. Entra al directorio app: `cd app`
